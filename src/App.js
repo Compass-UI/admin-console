@@ -31,10 +31,18 @@ function Square(props) {
 }
 
 class Board extends React.Component {
+  fill(a, l, val) {
+    for(var i=0; i < a.length; i++){
+      a[i]= val;
+    }
+    return a;
+  };
+  // var a = fill(Array(9), 9, null);
   constructor(props) {
     super(props);
     this.state = {
-      squares: Array(9).fill(null),
+      // squares: Array(9).fill(null), // IE11 Does not support fill
+      squares: this.fill(Array(9), 9, null),
       xIsNext: true,
     };
   }
