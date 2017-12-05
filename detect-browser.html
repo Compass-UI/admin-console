@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function detectFeature(){
+            let canvas = document.createElement("canvas");
+//            return canvas.getContext? true: false;
+            return Array(1).fill? true: false;
+
+        }
+        function isIE11(){
+            let nav = navigator.userAgent.toLowerCase();
+            let version;
+            console.log("This will fail!");
+            console.log("Do not detect browser detect feature!");
+            if(nav.indexOf('msie') != -1){
+                version = parseInt(nav.split('msie')[1]);
+                return version;
+            }
+            else return false;
+        }
+        console.info(isIE11());
+        console.log("detectBrowser: ");
+//        console.log("Canvas: " + detectFeature());
+        console.log("Array.fill: " + detectFeature());//Simple test to see if IE11
+    </script>
+</body>
+</html>
